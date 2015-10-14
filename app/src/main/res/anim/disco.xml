@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shareInterpolator="false"
+    android:fillAfter="true">
+
+    <rotate
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+        android:fromDegrees="0"
+        android:toDegrees="-45"
+        android:toYScale="0.0"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:fillAfter="false"
+        android:duration="@integer/anim_duration_medium" />
+
+    <set
+        android:interpolator="@android:anim/decelerate_interpolator"
+        android:fillAfter="false">
+
+        <translate
+            android:fromXDelta="0"
+            android:toXDelta="500"
+            android:fromYDelta="0"
+            android:toYDelta="800"
+            android:startOffset="@integer/anim_duration_medium"
+            android:duration="@integer/anim_duration_extra_long"/>
+
+        <scale
+            android:fromXScale="1"
+            android:toXScale="0.6"
+            android:fromYScale="1"
+            android:toYScale="0.7"
+            android:startOffset="@integer/anim_duration_medium"
+            android:duration="@integer/anim_duration_extra_long"/>
+    </set>
+
+    <rotate
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+        android:fromDegrees="-45"
+        android:toDegrees="45"
+        android:toYScale="0.0"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:fillBefore="false"
+        android:startOffset="@integer/wait_time_medium_plus_extra_long"
+        android:duration="@integer/anim_duration_medium" />
+</set>
